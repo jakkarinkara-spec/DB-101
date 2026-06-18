@@ -12,18 +12,18 @@ export default async function UsersPage() {
       <main className="w-full max-w-2xl">
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
-            ผู้ใช้ทั้งหมด ({allUsers.length})
+            All User ({allUsers.length})
           </h1>
           <Link
             href="/users/new"
             className="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-300"
           >
-            + เพิ่มผู้ใช้
+            + Add New User
           </Link>
         </div>
 
         {allUsers.length === 0 ? (
-          <p className="text-zinc-500">ยังไม่มีผู้ใช้ — กด “เพิ่มผู้ใช้” เพื่อเริ่มต้น</p>
+          <p className="text-zinc-500">No users yet — click 'Add User' to get started</p>
         ) : (
           <ul className="flex flex-col gap-2">
             {allUsers.map((u) => (
